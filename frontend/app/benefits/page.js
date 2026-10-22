@@ -1,7 +1,11 @@
-import Hero from '@/components/Hero';
-import Benefits from '@/components/Benefits';
 
-export const metadata = { title: '청년 혜택 | 무브산' };
+import Hero from '@/components/Hero';
+import BenefitsComparison from './BenefitsComparison';
+
+export const metadata = {
+  title: '청년 혜택 비교 | 무브산',
+  description: '서울과 부산의 청년 정책 및 경제적 혜택을 비교합니다.',
+};
 
 export default function BenefitsPage() {
   return (
@@ -9,12 +13,17 @@ export default function BenefitsPage() {
       <Hero
         compact
         eyebrow="YOUTH BENEFITS"
-        title={<>부산의 청년을 위한<br /><em>다양한 혜택</em>을 한눈에</>}
-        subtitle="주거, 금융, 교통, 교육, 취업 등 부산시와 기관의 청년 지원사업을 확인해 보세요."
+        title={
+          <>
+            서울과 부산,<br />
+            <em>청년 혜택을 비교해 보세요</em>
+          </>
+        }
+        subtitle="나의 조건에 맞는 청년 정책을 살펴보고, 부산 이주 시 달라지는 경제적 혜택을 확인해 보세요."
       />
       <div className="page">
         <div className="lift">
-          <Benefits />
+          <BenefitsComparison />
         </div>
       </div>
     </>
